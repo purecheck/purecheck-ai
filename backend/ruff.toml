@@ -1,0 +1,16 @@
+line-length = 100
+target-version = "py312"
+
+exclude = [
+    ".venv",
+    "__pycache__",
+    "migrations",
+    "supabase",
+]
+
+[lint]
+select = ["E", "F", "W"]
+ignore = [
+    "E402",  # module-level import not at top — needed in test scripts that mutate sys.path/cwd
+    "E702",  # multiple statements on one line — legacy test files
+]

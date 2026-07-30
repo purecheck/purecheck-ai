@@ -1,0 +1,88 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+
+# Environment variables — never commit real secrets
+# Block all .env files…
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+# …but allow .env.example (documentation, no real secrets)
+!.env.example
+backend/.env
+backend/.env.local
+backend/.env.*.local
+backend/.env.development
+backend/.env.production
+!backend/.env.example
+
+# Python virtual environment
+.venv
+backend/.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+._*
+
+# Vite internals
+.vite
+
+# ML model weights — large binary files
+*.pth
+*.pt
+*.onnx
+*.bin
+Models/
+
+# Editor directories and files
+*.local
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+._*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Additional local / secret ignores
+# Local build outputs
+build/
+
+# Alternate virtualenv names
+myenv/
+
+# Docker local overrides and runtime artifacts
+docker-compose.override.yml
+.docker/
+
+# Hugging Face / ML cache
+.hf/
+.cache/
+
+# Secrets files
+secrets.env
+*.secret
+
+# Local DB / artifacts
+*.sqlite3
+*.db
