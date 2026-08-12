@@ -2,7 +2,7 @@
   <img src="public/fish.gif" alt="PureCheck AI Logo" width="96" style="border-radius: 12px;" />
   <h1 align="center">PureCheck AI</h1>
   <h3 align="center">
-    Real-time fish freshness assessment using Edge AI — ensure consumer safety, vendor transparency, and minimize food waste.
+    Real-time fish freshness assessment using Edge AI — ensuring consumer safety, vendor transparency, and minimizing food waste.
   </h3>
 </div>
 
