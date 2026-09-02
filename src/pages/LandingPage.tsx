@@ -152,6 +152,27 @@ export default function LandingPage() {
               </GlassCard>
             ))}
           </div>
+
+          {/* ── NEW PRODUCESCAN AI BANNER ── */}
+          <GlassCard className="mt-12 p-8 border-neon/40 relative overflow-hidden" variant="glass">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+              <div className="space-y-2 max-w-2xl">
+                <span className="status-terminal inline-block text-[0.625rem]">NEW MODULE: PRODUCESCAN_AI</span>
+                <h3 className="text-2xl md:text-3xl font-bold font-[family-name:var(--font-display)] text-tertiary">
+                  Fruits & Vegetables Quality Analysis <span className="text-neon">with PicSet</span>
+                </h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">
+                  Multi-angle AI vision pipeline analyzing 10 Fruits & 10 Vegetables. Instant biomarker diagnostics, ripeness staging, defect mapping, and shelf-life prediction.
+                </p>
+              </div>
+              <Link
+                to="/produce"
+                className="px-6 py-3 bg-neon text-on-primary font-bold font-[family-name:var(--font-display)] tracking-wider text-xs uppercase no-underline hover:bg-neon-dim transition-colors shrink-0 flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(195,244,0,0.2)]"
+              >
+                LAUNCH PRODUCE SCAN ➔
+              </Link>
+            </div>
+          </GlassCard>
         </div>
       </section>
 

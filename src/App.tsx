@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
 import ModeSelectPage from './pages/ModeSelectPage';
 import ScannerPage from './pages/ScannerPage';
+import ProduceScannerPage from './pages/ProduceScannerPage';
 import AnalysisDashboard from './pages/AnalysisDashboard';
 import MarketMapPage from './pages/MarketMapPage';
 import ResultsPage from './pages/ResultsPage';
@@ -45,6 +46,7 @@ useEffect(() => {
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/mode" element={<ModeSelectPage />} />
           <Route path="/scanner" element={<ScannerPage />} />
+          <Route path="/produce" element={<ProduceScannerPage />} />
           <Route path="/analysis" element={<AnalysisDashboard />} />
           <Route path="/map" element={<MarketMapPage />} />
           <Route path="/leaderboard" element={<Leaderboard />} />

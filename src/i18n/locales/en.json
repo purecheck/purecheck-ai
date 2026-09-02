@@ -2,6 +2,7 @@
   "navbar": {
     "home": "HOME",
     "scanner": "SCANNER",
+    "produce": "PRODUCE SCAN",
     "trustMap": "TRUST MAP",
     "signin": "SIGN IN / SIGN UP",
     "results": "RESULTS",
@@ -376,5 +377,24 @@
     },
     "unknown": "An unexpected error occurred. Please try again.",
     "serverError": "Server error. Please try again later."
+  },
+  "produceScanner": {
+    "title": "ProduceScan AI",
+    "subtitle": "Multimodal PicSet AI Quality & Biomarker Analysis for Fruits & Vegetables",
+    "picsetMode": "PicSet Multi-Angle AI",
+    "fastMode": "Fast Single Scan",
+    "selectProduce": "Select Specimen",
+    "fruitsCategory": "10 Fruits",
+    "veggiesCategory": "10 Vegetables",
+    "angleSurface": "Angle 1: Surface / Epidermis",
+    "angleStem": "Angle 2: Stem / Calyx / Base",
+    "angleSection": "Angle 3: Cut / Cross-Section",
+    "runAnalysis": "RUN AI QUALITY ANALYSIS",
+    "resetScan": "RESET SCANNER",
+    "freshnessScore": "Freshness Index",
+    "ripenessStage": "Ripeness Stage",
+    "defectAnalysis": "Biomarker & Defect Diagnostics",
+    "shelfLife": "Estimated Shelf Life",
+    "gradcamTitle": "PicSet Biomarker Heatmap Overlay (Grad-CAM)"
   }
 }

@@ -12,6 +12,16 @@
 
 FreshScan AI analyzes three biologically-significant freshness markers — **gill**, **eye**, and **body** — to produce a single Freshness Index (0–100). Inference runs in under 50ms directly on-device, and anonymized scan data is aggregated onto an interactive Market Trust Map to surface reliable vendor locations.
 
+Now includes **ProduceScan AI**: Multimodal PicSet Quality & Biomarker Analysis for **10 Fruits** and **10 Vegetables**.
+
+---
+
+## 🚀 Easy 1-Click Launch (Windows)
+
+Simply double-click either batch file in the root directory:
+- **`START_PURECHECK.bat`**: Launches the main application and opens `http://localhost:5173`.
+- **`START_PRODUCE_SCAN.bat`**: Directly launches the Fruits & Vegetables PicSet Scanner (`http://localhost:5173/produce`).
+
 ---
 
 ## Tech Stack

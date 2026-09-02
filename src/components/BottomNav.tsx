@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ScanLine, Map, Layers } from 'lucide-react';
+import { ScanLine, Map, Layers, Apple } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const navItems = [
   { to: '/scanner', icon: ScanLine, labelKey: 'components.bottomNav.scanner' },
+  { to: '/produce', icon: Apple, labelKey: 'navbar.produce' },
   { to: '/map', icon: Map, labelKey: 'components.bottomNav.map' },
   { to: '/mode', icon: Layers, labelKey: 'components.bottomNav.mode' },
 ];

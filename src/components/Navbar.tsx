@@ -57,6 +57,7 @@ export default function Navbar() {
   const links = [
     { to: '/', label: t('navbar.home') },
     { to: '/scanner', label: t('navbar.scanner') },
+    { to: '/produce', label: t('navbar.produce', 'PRODUCE SCAN') },
     { to: '/map', label: t('navbar.trustMap') },
   ];
 
