@@ -396,5 +396,25 @@
     "defectAnalysis": "Biomarker & Defect Diagnostics",
     "shelfLife": "Estimated Shelf Life",
     "gradcamTitle": "PicSet Biomarker Heatmap Overlay (Grad-CAM)"
+  },
+  "marketMap": {
+    "trustMapTerminal": "TRUST MAP // REGION ACTIVE",
+    "regionPrefix": "REGION: ",
+    "syncingDb": "SYNCING DB...",
+    "loadError": "LOAD ERROR",
+    "nodesPrefix": "NODES: ",
+    "marketTrustTitle": "MARKET TRUST",
+    "mapTitle": "MAP",
+    "leaderboardLink": "[ VENDOR LEADERBOARD ]",
+    "vendorsLabel": "VENDORS LISTED",
+    "avgFreshness": "AVG FRESHNESS SCORE",
+    "selectMarketNode": "[ CLICK A MARKET NODE TO INSPECT FRESHNESS DATA ]",
+    "highTrust": "HIGH TRUST (85+)",
+    "mediumTrust": "MED TRUST (70-84)",
+    "lowTrust": "LOW TRUST (<70)",
+    "scorePrefix": "SCORE: ",
+    "vendorsPrefix": "VENDORS: ",
+    "failedLoadMarkets": "Failed to load live markets. Displaying local Alappuzha market network.",
+    "failedLoadMarketData": "Unable to retrieve remote market nodes."
   }
 }

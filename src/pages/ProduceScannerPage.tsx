@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
 import StatusTerminal from '../components/StatusTerminal';
+import ScannerAROverlay from '../components/ScannerAROverlay';
 
 // ── Produce Item Type Definitions ─────────────────────────────────────────────
 
@@ -298,7 +299,9 @@ export default function ProduceScannerPage() {
           </div>
 
           {/* PicSet Multi-Angle Slots */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="relative">
+            <ScannerAROverlay mode="produce" active={!result} />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {(scanMode === 'picset' ? picsetSlots : [picsetSlots[0]]).map((slot, idx) => (
               <div
                 key={idx}
@@ -342,6 +345,7 @@ export default function ProduceScannerPage() {
                 </div>
               </div>
             ))}
+          </div>
           </div>
 
           {/* Action Trigger Button */}

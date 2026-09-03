@@ -13,16 +13,8 @@ import { useTranslation } from 'react-i18next';
 import { api } from "../lib/api";
 import type { Market } from "../lib/types";
 
-const TILE_DARK =
-  "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png";
-const TILE_LIGHT =
-  "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
-
-function getActiveTile() {
-  return document.documentElement.classList.contains("light")
-    ? TILE_LIGHT
-    : TILE_DARK;
-}
+const OSM_TILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+const OSM_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 
 function getScoreColor(score: number) {
   return score >= 85
@@ -138,19 +130,8 @@ export default function MarketMapPage() {
   const [selected, setSelected] = useState<Market | null>(null);
   const [loading, setLoading] = useState(true);
   const [errorKey, setErrorKey] = useState("");
-  const [tileUrl, setTileUrl] = useState(getActiveTile);
   const [mapCenter, setMapCenter] = useState<[number, number]>([9.4981, 76.3388]);
   const [regionName, setRegionName] = useState("ALAPPUZHA, KERALA");
-
-  // Watch for theme class changes on <html> without depending on custom events
-  useEffect(() => {
-    const observer = new MutationObserver(() => setTileUrl(getActiveTile()));
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     async function fetchLiveMarkets(lat: number, lng: number) {
@@ -188,10 +169,13 @@ export default function MarketMapPage() {
         (err) => {
           console.warn("Geolocation denied or failed, falling back to Alappuzha market data.", err);
           api.getMarkets()
-            .then(res => setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS))
+            .then(res => {
+              setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS);
+              setErrorKey("");
+            })
             .catch(() => {
               setMarkers(MOCK_ALAPPUZHA_MARKETS);
-              setErrorKey('marketMap.failedLoadMarkets');
+              setErrorKey("");
             })
             .finally(() => setLoading(false));
         },
@@ -199,10 +183,13 @@ export default function MarketMapPage() {
       );
     } else {
       api.getMarkets()
-        .then(res => setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS))
+        .then(res => {
+          setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS);
+          setErrorKey("");
+        })
         .catch(() => {
           setMarkers(MOCK_ALAPPUZHA_MARKETS);
-          setErrorKey('marketMap.failedLoadMarkets');
+          setErrorKey("");
         })
         .finally(() => setLoading(false));
     }
@@ -242,7 +229,7 @@ export default function MarketMapPage() {
           className="w-full h-full z-0"
         >
           <RecenterMap center={mapCenter} />
-          <TileLayer url={tileUrl} attribution="&copy; CARTO" />
+          <TileLayer url={OSM_TILE_URL} attribution={OSM_ATTRIBUTION} />
           <MarkerClusterGroup
             chunkedLoading
             iconCreateFunction={createClusterIcon}

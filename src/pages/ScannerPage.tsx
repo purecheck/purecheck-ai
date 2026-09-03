@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import StatusTerminal from "../components/StatusTerminal";
 import CameraOverlay from "../components/CameraOverlay";
+import ScannerAROverlay from "../components/ScannerAROverlay";
 import { api, isAuthenticated } from "../lib/api";
 import { FishFreshnessInference } from "../fusionInference.js";
 import type { ScanResult } from "../lib/types";
@@ -426,6 +427,9 @@ export default function ScannerPage() {
 
           {/* Camera Overlay Bounding Box */}
           <CameraOverlay active={scanPhase === "idle"} />
+
+          {/* Futuristic AR Targeting HUD Overlay */}
+          <ScannerAROverlay mode="fish" active={scanPhase === "idle" && !previewUrl} />
 
           {/* Grid overlay */}
           <div

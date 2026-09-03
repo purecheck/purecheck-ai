@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowLeft, AlertTriangle, Droplets, Eye as EyeIcon, Fish } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
 import StatusTerminal from '../components/StatusTerminal';
+import ShelfLifePredictor from '../components/ShelfLifePredictor';
 import { api } from '../lib/api';
 import type { ScanResult } from '../lib/types';
 
@@ -196,6 +197,14 @@ export default function AnalysisDashboard() {
             </div>
           </GlassCard>
         </div>
+
+        {/* AI Shelf-Life & Spoilage Predictor */}
+        <ShelfLifePredictor
+          freshnessIndex={freshness_index}
+          grade={grade}
+          itemType={species.common_name}
+          className="mb-8"
+        />
 
         {/* Biomarkers — 3 model-native streams */}
         <div className="mb-8">
