@@ -107,7 +107,7 @@ export default function Navbar() {
 >
             <option value="en">EN</option>
             <option value="hi">HI</option>
-            <option value="bn">BN</option>
+            <option value="ml">ML</option>
           </select>
           {/* Theme Toggle Button */}
           <button
