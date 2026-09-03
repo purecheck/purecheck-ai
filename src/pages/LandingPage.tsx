@@ -1,32 +1,30 @@
 import { Link } from 'react-router-dom';
-import { isAuthenticated } from '../lib/api';
 import { Zap, Eye, MapPin, ScanLine, Target, Award, ChevronDown } from 'lucide-react';
 import GlassCard from '../components/GlassCard';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import BackToTopButton from '../components/BackToTopButton';
 
 export default function LandingPage() {
   const { t } = useTranslation();
 
-      const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [loggedIn, setLoggedIn] = useState(isAuthenticated());
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const features = [
     {
       icon: Zap,
-      title: t('landing.dualStreamTitle'),
-      desc: t('landing.dualStreamDesc'),
+      title: "Fish Freshness Stream A/B AI",
+      desc: "Parallel neural vision networks inspecting full fish body and micro-biomarkers (Eyes, Gills, Skin).",
     },
     {
       icon: Eye,
-      title: t('landing.explainableAITitle'),
-      desc: t('landing.explainableAIDesc'),
+      title: "ProduceScan PicSet 3-Angle AI",
+      desc: "Multi-view quality analysis for 10 Fruits & 10 Vegetables (Surface, Stem/Calyx, and Cross-Section).",
     },
     {
       icon: MapPin,
-      title: t('landing.crowdsourcedTitle'),
-      desc: t('landing.crowdsourcedDesc'),
+      title: "Google Places Trust Map",
+      desc: "Live crowdsourced quality map connected to Google Places ratings & reviews across Alappuzha markets.",
     },
   ];
 
@@ -58,12 +56,6 @@ export default function LandingPage() {
     { q: t('landing.faq.q4'), a: t('landing.faq.a4') },
     { q: t('landing.faq.q5'), a: t('landing.faq.a5') },
   ];
-
-  useEffect(() => {
-    const handleAuthChange = () => setLoggedIn(isAuthenticated());
-    window.addEventListener('auth-change', handleAuthChange);
-    return () => window.removeEventListener('auth-change', handleAuthChange);
-  }, []);
 
   return (
     <div id="landing-top" className="relative">
@@ -98,25 +90,32 @@ export default function LandingPage() {
                 {t('landing.accuracyValue')}
               </span>
             </GlassCard>
+            <GlassCard className="px-6 py-4" variant="glass">
+              <span className="font-[family-name:var(--font-mono)] text-[0.625rem] tracking-widest text-on-surface-variant uppercase block mb-1">
+                SPECIMEN COVERAGE
+              </span>
+              <span className="font-[family-name:var(--font-display)] text-3xl font-bold text-secondary">
+                20+ TYPES
+              </span>
+            </GlassCard>
           </div>
 
-          {/* CTA Buttons */}
+          {/* Dual CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/mode"
-              className="bg-neon text-on-primary px-8 py-4 font-[family-name:var(--font-display)] font-bold text-sm tracking-wider no-underline transition-all duration-200 hover:bg-neon-dim pulse-glow inline-flex items-center gap-3"
+              to="/scanner"
+              className="bg-neon text-on-primary px-8 py-4 font-[family-name:var(--font-display)] font-bold text-sm tracking-wider no-underline transition-all duration-200 hover:bg-neon-dim pulse-glow inline-flex items-center gap-2.5"
             >
-              <ScanLine size={18} />
-              {t('landing.beginAssessment')}
+              <span>🐟</span>
+              <span>SCAN SEAFOOD</span>
             </Link>
-            {!loggedIn && (
-              <Link
-                to="/auth"
-                className="hidden md:inline-flex bg-transparent text-neon px-8 py-4 font-[family-name:var(--font-display)] font-bold text-sm tracking-wider no-underline ghost-border transition-all duration-200 hover:bg-surface-high items-center gap-3"
-              >
-                {t('landing.initializeSession')}
-              </Link>
-            )}
+            <Link
+              to="/produce"
+              className="bg-surface-highest text-neon border border-neon/50 px-8 py-4 font-[family-name:var(--font-display)] font-bold text-sm tracking-wider no-underline transition-all duration-200 hover:bg-neon hover:text-on-primary inline-flex items-center gap-2.5 shadow-[0_0_15px_rgba(195,244,0,0.15)]"
+            >
+              <span>🥦</span>
+              <span>SCAN PRODUCE</span>
+            </Link>
           </div>
         </div>
       </section>
