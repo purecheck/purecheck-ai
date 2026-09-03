@@ -1,7 +1,7 @@
 {
   "navbar": {
     "home": "होम",
-    "scanner": "स्कैनर",
+    "scanner": "सीफूड स्कैन",
     "produce": "सब्जी/फल स्कैन",
     "trustMap": "ट्रस्ट मैप",
     "signin": "साइन इन / साइन अप",
@@ -313,7 +313,7 @@
   },
   "components": {
     "bottomNav": {
-      "scanner": "स्कैनर",
+      "scanner": "सीफूड स्कैन",
       "map": "मैप",
       "mode": "मोड"
     },

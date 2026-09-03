@@ -1,7 +1,7 @@
 {
   "navbar": {
     "home": "HOME",
-    "scanner": "SCANNER",
+    "scanner": "SEAFOOD SCAN",
     "produce": "PRODUCE SCAN",
     "trustMap": "TRUST MAP",
     "signin": "SIGN IN / SIGN UP",
@@ -319,7 +319,7 @@
   },
   "components": {
     "bottomNav": {
-      "scanner": "SCANNER",
+      "scanner": "SEAFOOD SCAN",
       "map": "MAP",
       "mode": "MODE"
     },
