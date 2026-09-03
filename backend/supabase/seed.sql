@@ -3,14 +3,14 @@
 
 INSERT INTO public.vendors (name, address, lat, lng, trust_score, avg_freshness_score, vendor_count, total_scans)
 VALUES
-  ('Howrah Fish Market',     'Howrah, West Bengal',       22.5958, 88.3099, 88.0, 88, 47, 342),
-  ('Gariahat Market',        'Gariahat, Kolkata',          22.5196, 88.3653, 94.0, 94, 31, 289),
-  ('New Market Fish Hall',   'New Market, Kolkata',        22.5654, 88.3499, 61.0, 61, 24, 156),
-  ('Lake Market',            'Rashbehari, Kolkata',        22.5151, 88.3469, 78.0, 78, 19, 198),
-  ('Maniktala Bazaar',       'Maniktala, Kolkata',         22.5807, 88.3793, 72.0, 72, 28, 211),
-  ('Shyambazar Fish Market', 'Shyambazar, Kolkata',        22.5953, 88.3720, 82.0, 82, 22, 167),
-  ('Jorabagan Market',       'Jorabagan, Kolkata',         22.5843, 88.3594, 65.0, 65, 15, 113),
-  ('Jadavpur Fish Market',   'Jadavpur, Kolkata',          22.4981, 88.3706, 91.0, 91, 36, 248)
+  ('Mullakkal Market',              'Mullakkal, Alappuzha, Kerala',       9.4942, 76.3358, 95.0, 95, 38, 342),
+  ('Alappuzha Canal Bazaar',        'Canal Bazaar, Alappuzha, Kerala',    9.4920, 76.3325, 92.0, 92, 45, 289),
+  ('Kalarcode Produce Market',      'Kalarcode, Alappuzha, Kerala',       9.4678, 76.3450, 88.0, 88, 29, 198),
+  ('Thottappally Harbour Market',   'Thottappally, Alappuzha, Kerala',    9.3175, 76.3860, 90.0, 90, 52, 211),
+  ('Cherthala Town Market',         'Cherthala, Alappuzha, Kerala',       9.6850, 76.3310, 84.0, 84, 31, 167),
+  ('Ambalappuzha Market',           'Ambalappuzha, Alappuzha, Kerala',    9.3820, 76.3680, 89.0, 89, 24, 156),
+  ('Haripad Fish & Produce Market', 'Haripad, Alappuzha, Kerala',         9.2840, 76.4520, 79.0, 79, 20, 113),
+  ('Kayamkulam Central Bazaar',     'Kayamkulam, Alappuzha, Kerala',      9.1720, 76.5010, 86.0, 86, 41, 248)
 ON CONFLICT DO NOTHING;
 
 -- Insert DEV bypass user so local scans don't fail foreign key constraints

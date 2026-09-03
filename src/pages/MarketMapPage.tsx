@@ -120,16 +120,27 @@ function RecenterMap({ center }: { center: [number, number] }) {
   return null;
 }
 
+const MOCK_ALAPPUZHA_MARKETS: Market[] = [
+  { id: 1, name: "Mullakkal Market", lat: 9.4942, lng: 76.3358, score: 95, vendors: 38 },
+  { id: 2, name: "Alappuzha Canal Bazaar", lat: 9.4920, lng: 76.3325, score: 92, vendors: 45 },
+  { id: 3, name: "Kalarcode Produce Market", lat: 9.4678, lng: 76.3450, score: 88, vendors: 29 },
+  { id: 4, name: "Thottappally Harbour Market", lat: 9.3175, lng: 76.3860, score: 90, vendors: 52 },
+  { id: 5, name: "Cherthala Town Market", lat: 9.6850, lng: 76.3310, score: 84, vendors: 31 },
+  { id: 6, name: "Ambalappuzha Market", lat: 9.3820, lng: 76.3680, score: 89, vendors: 24 },
+  { id: 7, name: "Haripad Fish & Produce Market", lat: 9.2840, lng: 76.4520, score: 79, vendors: 20 },
+  { id: 8, name: "Kayamkulam Central Bazaar", lat: 9.1720, lng: 76.5010, score: 86, vendors: 41 },
+];
+
 export default function MarketMapPage() {
   const { t } = useTranslation();
 
-      const [markers, setMarkers] = useState<Market[]>([]);
+  const [markers, setMarkers] = useState<Market[]>([]);
   const [selected, setSelected] = useState<Market | null>(null);
   const [loading, setLoading] = useState(true);
   const [errorKey, setErrorKey] = useState("");
   const [tileUrl, setTileUrl] = useState(getActiveTile);
-  const [mapCenter, setMapCenter] = useState<[number, number]>([22.5726, 88.3639]);
-  const [regionName, setRegionName] = useState("KOLKATA");
+  const [mapCenter, setMapCenter] = useState<[number, number]>([9.4981, 76.3388]);
+  const [regionName, setRegionName] = useState("ALAPPUZHA, KERALA");
 
   // Watch for theme class changes on <html> without depending on custom events
   useEffect(() => {
@@ -144,11 +155,16 @@ export default function MarketMapPage() {
   useEffect(() => {
     async function fetchLiveMarkets(lat: number, lng: number) {
       setLoading(true);
+      setErrorKey("");
       try {
         const res = await api.getLiveMarkets(lat, lng);
-        setMarkers(res.markets || []);
+        if (res.markets && res.markets.length > 0) {
+          setMarkers(res.markets);
+        } else {
+          setMarkers(MOCK_ALAPPUZHA_MARKETS);
+        }
       } catch (err) {
-        // Handle translatable error keys from the API, with a specific fallback for this page.
+        setMarkers(MOCK_ALAPPUZHA_MARKETS);
         if (err instanceof Error && err.message.startsWith('error.')) {
           setErrorKey(err.message);
         } else {
@@ -170,18 +186,24 @@ export default function MarketMapPage() {
           fetchLiveMarkets(latitude, longitude);
         },
         (err) => {
-          console.warn("Geolocation denied or failed, falling back to mock data.", err);
+          console.warn("Geolocation denied or failed, falling back to Alappuzha market data.", err);
           api.getMarkets()
-            .then(res => setMarkers(res.markets || []))
-            .catch(() => setErrorKey('marketMap.failedLoadMarkets'))
+            .then(res => setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS))
+            .catch(() => {
+              setMarkers(MOCK_ALAPPUZHA_MARKETS);
+              setErrorKey('marketMap.failedLoadMarkets');
+            })
             .finally(() => setLoading(false));
         },
         { timeout: 10000, enableHighAccuracy: false }
       );
     } else {
       api.getMarkets()
-        .then(res => setMarkers(res.markets || []))
-        .catch(() => setErrorKey('marketMap.failedLoadMarkets'))
+        .then(res => setMarkers(res.markets && res.markets.length > 0 ? res.markets : MOCK_ALAPPUZHA_MARKETS))
+        .catch(() => {
+          setMarkers(MOCK_ALAPPUZHA_MARKETS);
+          setErrorKey('marketMap.failedLoadMarkets');
+        })
         .finally(() => setLoading(false));
     }
   }, []);

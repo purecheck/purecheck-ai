@@ -134,7 +134,7 @@ DEV_BYPASS_AUTH=true   # never set true in production
 | Fish scanning | Demo mode — random scores, no `.pth` files needed |
 | Grad-CAM heatmap | Synthetic overlay (PIL only) |
 | Scan history / DB | Local Docker or shared dev Supabase |
-| Market map | Pre-seeded with 8 Kolkata fish markets |
+| Market map | Pre-seeded with 8 Alappuzha, Kerala fish & produce markets |
 | Real ML inference | Optional — set `MODEL_DIR` in `backend/.env` |
 
 ---

@@ -607,7 +607,7 @@ ScanPhase state machine:
 - Clicking a card navigates to `/analysis?id=<scan_id>`
 
 #### MarketMapPage
-- **Map:** Leaflet MapContainer centered on Kolkata (22.5726°N, 88.3639°E)
+- **Map:** Leaflet MapContainer centered on Alappuzha, Kerala (9.4981°N, 76.3388°E)
 - **Tile Layer:** CARTO Dark (no bright background)
 - **Markers:** Custom diamond icons colored by freshness tier (green/yellow/red)
 - **Info Panel:** Selected market details with freshness bar
@@ -694,7 +694,7 @@ Every scan report breaks down scores for all three biomarkers individually — g
 Temperature-scaled softmax ensures the model doesn't overstate certainty. The `uncertain_flag` triggers a cautionary indicator in the UI when confidence falls below 70%, prompting a re-scan.
 
 ### 6. Market Trust Map
-Live Leaflet map centered on Kolkata showing vendor markets color-coded by average freshness score. Green (85+), yellow (70–84), red (<70). Data populated from anonymized scan submissions.
+Live Leaflet map centered on Alappuzha, Kerala showing vendor markets color-coded by average freshness score. Green (85+), yellow (70–84), red (<70). Data populated from anonymized scan submissions.
 
 ### 7. Scan History & Analytics
 Full personal scan history with aggregate statistics: total scans, average freshness score, and fresh rate percentage. Each history entry links to its full analysis report.
