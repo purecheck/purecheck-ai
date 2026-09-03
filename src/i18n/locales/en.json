@@ -18,7 +18,7 @@
     "heroLine1": "Fish Freshness",
     "heroLine2": "*Objectively Graded*",
     "heroSubtitle": "Academic-grade AI vision engineered for real-time biomarker analysis in high-humidity environments.",
-    "heroDescription": "FreshScan AI transforms the chaotic wet market into a structured, <1>transparent ecosystem</1>.",
+    "heroDescription": "PureCheck AI transforms chaotic markets into a structured, <1>transparent ecosystem</1>.",
     "inferenceSpeed": "Inference Speed",
     "speedValue": "<50ms",
     "biomarkerAccuracy": "Biomarker Accuracy",
@@ -155,7 +155,7 @@
     "authenticationTitle": "AUTHENTICATION",
     "protocolOauth": "PROTOCOL: OAUTH-SECURE",
     "authWatermark": "AUTH",
-    "freshscanBrand": "FRESHSCAN ",
+    "freshscanBrand": "PURECHECK ",
     "aiBrand": "AI",
     "authFailed": "Authentication failed. Please try again.",
     "authSubtitle": "Sign in to view your live Trust Map and sync biomarker data across devices.",
@@ -324,27 +324,27 @@
       "mode": "MODE"
     },
     "footer": {
-      "freshscanAi": "FreshScan AI",
+      "freshscanAi": "PureCheck AI",
       "faq": "FAQ",
-      "copyright": "© 2026 FreshScan AI. All rights reserved. Precision Intelligence."
+      "copyright": "© 2026 PureCheck AI. All rights reserved. Precision Intelligence."
     },
     "layout": {
-      "watermark": "FS AI"
+      "watermark": "PC AI"
     },
     "installPrompt": {
-      "iosMessage": "Add FreshScan AI to your Home Screen for one-tap fish freshness analysis. Tap Share and select Add to Home Screen.",
-      "androidMessage": "Add FreshScan AI to your home screen for instant fish freshness analysis in one tap.",
-      "appName": "FreshScan AI",
+      "iosMessage": "Add PureCheck AI to your Home Screen for one-tap fish & produce freshness analysis. Tap Share and select Add to Home Screen.",
+      "androidMessage": "Add PureCheck AI to your home screen for instant freshness analysis in one tap.",
+      "appName": "PureCheck AI",
       "promptTitle": "Install App",
       "installButton": "Install",
       "notNowButton": "Not Now",
-      "appImageAlt": "FreshScan AI",
+      "appImageAlt": "PureCheck AI",
       "installedConsole": "User installed the PWA!",
       "dismissedConsole": "User dismissed the install dialog.",
       "errorConsole": "Error triggering the install prompt:"
     },
     "onboardingTour": {
-      "welcomeMessage": "Welcome to FreshScanAI! Let's take a quick tour.",
+      "welcomeMessage": "Welcome to PureCheck AI! Let's take a quick tour.",
       "scannerStep": "Use Scanner to analyze fish freshness.",
       "mapStep": "View market insights and trust map here."
     },

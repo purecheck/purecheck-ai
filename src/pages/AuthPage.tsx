@@ -111,7 +111,7 @@ export default function AuthPage() {
         <div className="mb-10 text-center">
           <div className="flex items-center justify-center gap-3 mb-6">
             <div className="w-12 h-12 bg-neon flex items-center justify-center">
-              <span className="text-on-primary font-bold text-xl font-[family-name:var(--font-display)]">FS</span>
+              <span className="text-on-primary font-bold text-xl font-[family-name:var(--font-display)]">PC</span>
             </div>
             <div>
               <h1 className="text-3xl font-bold tracking-tight font-[family-name:var(--font-display)]">

@@ -318,27 +318,27 @@
       "mode": "মোড"
     },
     "footer": {
-      "freshscanAi": "FreshScan AI",
+      "freshscanAi": "PureCheck AI",
       "faq": "FAQ",
-      "copyright": "© 2026 FreshScan AI. সর্বাধিকার সংরক্ষিত। নির্ভুল বুদ্ধিমত্তা।"
+      "copyright": "© 2026 PureCheck AI. সর্বাধিকার সংরক্ষিত। নির্ভুল বুদ্ধিমত্তা।"
     },
     "layout": {
-      "watermark": "FS AI"
+      "watermark": "PC AI"
     },
     "installPrompt": {
-      "iosMessage": "এক-ট্যাপ মাছ তাজা বিশ্লেষণের জন্য আপনার হোম স্ক্রীনে FreshScan AI যোগ করুন। শেয়ার করুন এবং হোম স্ক্রীনে যোগ করুন নির্বাচন করুন।",
-      "androidMessage": "তাৎক্ষণিক মাছ তাজা বিশ্লেষণের জন্য আপনার হোম স্ক্রীনে FreshScan AI যোগ করুন।",
-      "appName": "FreshScan AI",
+      "iosMessage": "এক-ট্যাপ তাজা বিশ্লেষণের জন্য আপনার হোম স্ক্রীনে PureCheck AI যোগ করুন। শেয়ার করুন এবং হোম স্ক্রীনে যোগ করুন নির্বাচন করুন।",
+      "androidMessage": "তাৎক্ষণিক তাজা বিশ্লেষণের জন্য আপনার হোম স্ক্রীনে PureCheck AI যোগ করুন।",
+      "appName": "PureCheck AI",
       "promptTitle": "অ্যাপ ইনস্টল করুন",
       "installButton": "ইনস্টল করুন",
       "notNowButton": "এখন নয়",
-      "appImageAlt": "FreshScan AI",
+      "appImageAlt": "PureCheck AI",
       "installedConsole": "ব্যবহারকারী PWA ইনস্টল করেছে!",
       "dismissedConsole": "ব্যবহারকারী ইনস্টল সংলাপ খারিজ করেছে।",
       "errorConsole": "ইনস্টল প্রম্পট ট্রিগার করতে ত্রুটি:"
     },
     "onboardingTour": {
-      "welcomeMessage": "FreshScanAI-তে স্বাগতম! দ্রুত ট্যুর চলতে দিন।",
+      "welcomeMessage": "PureCheck AI-তে স্বাগতম! দ্রুত ট্যুর চলতে দিন।",
       "scannerStep": "মাছের তাজা বিশ্লেষণ করতে স্ক্যানার ব্যবহার করুন।",
       "mapStep": "এখানে বাজার অন্তর্দৃষ্টি এবং ট্রাস্ট ম্যাপ দেখুন।"
     },

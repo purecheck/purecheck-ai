@@ -318,27 +318,27 @@
       "mode": "मोड"
     },
     "footer": {
-      "freshscanAi": "FreshScan AI",
+      "freshscanAi": "PureCheck AI",
       "faq": "FAQ",
-      "copyright": "© 2026 FreshScan AI. सर्वाधिकार सुरक्षित। सटीक बुद्धिमत्ता।"
+      "copyright": "© 2026 PureCheck AI. सर्वाधिकार सुरक्षित। सटीक बुद्धिमत्ता।"
     },
     "layout": {
-      "watermark": "FS AI"
+      "watermark": "PC AI"
     },
     "installPrompt": {
-      "iosMessage": "एक-टैप मछली ताजगी विश्लेषण के लिए अपनी होम स्क्रीन पर FreshScan AI जोड़ें। साझा करें पर टैप करें और होम स्क्रीन में जोड़ें चुनें।",
-      "androidMessage": "तत्काल मछली ताजगी विश्लेषण के लिए अपनी होम स्क्रीन पर FreshScan AI जोड़ें।",
-      "appName": "FreshScan AI",
+      "iosMessage": "एक-टैप ताजगी विश्लेषण के लिए अपनी होम स्क्रीन पर PureCheck AI जोड़ें। साझा करें पर टैप करें और होम स्क्रीन में जोड़ें चुनें।",
+      "androidMessage": "तत्काल ताजगी विश्लेषण के लिए अपनी होम स्क्रीन पर PureCheck AI जोड़ें।",
+      "appName": "PureCheck AI",
       "promptTitle": "ऐप्लिकेशन इंस्टॉल करें",
       "installButton": "इंस्टॉल",
       "notNowButton": "अभी नहीं",
-      "appImageAlt": "FreshScan AI",
+      "appImageAlt": "PureCheck AI",
       "installedConsole": "उपयोगकर्ता ने PWA स्थापित किया!",
       "dismissedConsole": "उपयोगकर्ता ने इंस्टॉल संवाद को खारिज कर दिया।",
       "errorConsole": "इंस्टॉल प्रॉम्प्ट ट्रिगर करने में त्रुटि:"
     },
     "onboardingTour": {
-      "welcomeMessage": "FreshScanAI में स्वागत है! आइए एक त्वरित दौरा करते हैं।",
+      "welcomeMessage": "PureCheck AI में स्वागत है! आइए एक त्वरित दौरा करते हैं।",
       "scannerStep": "मछली की ताजगी का विश्लेषण करने के लिए स्कैनर का उपयोग करें।",
       "mapStep": "यहां बाजार अंतर्दृष्टि और ट्रस्ट मैप देखें।"
     },

@@ -65,16 +65,21 @@ export default function Navbar() {
     <nav className="glass-panel fixed top-0 left-0 right-0 z-50 border-b border-outline-variant/15">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 no-underline">
+        <Link to="/" className="flex items-center gap-2 sm:gap-2.5 no-underline group">
           <img
             src="/fish.gif"
-            alt="FreshScan AI Logo"
-            className="w-9 h-9 object-contain"
+            alt="Fish AI"
+            className="w-8 h-8 sm:w-9 sm:h-9 object-contain group-hover:scale-105 transition-transform"
             style={{ imageRendering: 'auto' }}
           />
-          <span className="font-[family-name:var(--font-display)] font-bold text-lg tracking-tight text-tertiary">
-            FRESHSCAN<span className="text-neon">_AI</span>
+          <span className="font-[family-name:var(--font-display)] font-bold text-base sm:text-lg tracking-tight text-tertiary">
+            PURECHECK<span className="text-neon">_AI</span>
           </span>
+          <img
+            src="/produce.png"
+            alt="Produce AI"
+            className="w-8 h-8 sm:w-9 sm:h-9 object-contain rounded-md group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(195,244,0,0.3)]"
+          />
         </Link>
 
         {/* Desktop Nav Links */}
