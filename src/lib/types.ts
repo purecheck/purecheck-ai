@@ -63,6 +63,14 @@ export interface Market {
   lat: number;
   lng: number;
   vendors: number;
+  category?: 'fish' | 'produce' | 'general';
+  address?: string;
+  google_rating?: number;
+  google_reviews_count?: number;
+  google_place_id?: string;
+  google_maps_url?: string;
+  photo_url?: string;
+  is_open_now?: boolean;
 }
 
 export interface UserProfile {
